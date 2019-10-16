@@ -39,5 +39,16 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<distributionManagement>
+	    <repository>
+		<id>central</id>
+		<name>11d290a35f6d-releases</name>
+		<url>http://10.169.104.35:8081/artifactory/java-web</url>
+	    </repository>
+	    <snapshotRepository>
+		<id>snapshots</id>
+		<name>11d290a35f6d-snapshots</name>
+		<url>http://10.169.104.35:8081/artifactory/java-web</url>
+	    </snapshotRepository>
+	</distributionManagement>
 </project>
