@@ -13,7 +13,7 @@ class WebhookController {
      private Webhook webhook;
 
      @RequestMapping("/sum")
-     String sum(@RequestParam("a") Integer a, 
+     String sum(@RequestParam("a") Integer a,
                 @RequestParam("b") Integer b) {
           return String.valueOf(webhook.sum(a, b));
      }
