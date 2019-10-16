@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class WebhookController {
      @Autowired
-     private WebhookApplication webhook;
+     private Webhook webhook;
 
      @RequestMapping("/sum")
      String sum(@RequestParam("a") Integer a,
