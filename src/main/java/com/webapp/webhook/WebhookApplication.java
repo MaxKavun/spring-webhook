@@ -12,7 +12,7 @@ public class WebhookApplication {
 	}
 
 	@Service
-	public class Webhook {
+	public class WebhookApplication {
     	int sum(int a, int b) {
         	return a + b;
      }
