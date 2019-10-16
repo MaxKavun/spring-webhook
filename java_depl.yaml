@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-java
+  template:
+    metadata:
+      labels:
+        app: web-java
+    spec:
+      containers:
+      - name: webapp
+        image: cruelgangsta/jdkmavengit
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-web-svc
+spec:
+  type: NodePort
+  selector:
+    app: web-java
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30003
