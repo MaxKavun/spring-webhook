@@ -72,3 +72,15 @@ spec:
     port: 8080
     targetPort: 8080
     nodePort: 30003
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-web
+  labels:
+    app: web
+  namespace: qos-example
+spec:
+  containers:
+  - name: web-app
+    image: nginx
